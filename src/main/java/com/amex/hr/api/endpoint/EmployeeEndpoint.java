@@ -1,15 +1,18 @@
 package com.amex.hr.api.endpoint;
 
 import com.amex.hr.api.model.Employee;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import io.swagger.annotations.Api;
+import org.springframework.web.bind.annotation.*;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+@EnableSwagger2
 @RestController
+@RequestMapping("/employee")
+@Api(value="Employee service", description="Operations on employees in HR system")
 public class EmployeeEndpoint {
 
-    @RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Employee getById(@PathVariable("id") String id) {
         Employee employee = new Employee();
         employee.setId(1L);
