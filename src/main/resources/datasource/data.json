@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "John Smith",
+    "title": "CEO",
+    "reports": [ 2, 3 ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "title": "Manager",
+    "reports": [4]
+  },
+  {
+    "id": 3,
+    "name": "Harry Henderson",
+    "title": "Accountant",
+    "reports": []
+  },
+  {
+    "id": 4,
+    "name": "Mark White",
+    "title": "Engineer",
+    "reports": []
+  }
+]
